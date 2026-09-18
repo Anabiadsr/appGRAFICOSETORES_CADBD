@@ -16,7 +16,7 @@ export default function App() {
   const [pieData, setPieData] = useState([]);
   const [loading, setLoading] = useState(true);
 
-  const endereco = "http://192.168.1.11/grafico_farmacia";
+  const endereco = "http://10.67.57.170/AULAPAMII/grafico_farmacia";
 
   // Configuração visual padrão para os gráficos
   const chartConfig = {
@@ -37,7 +37,7 @@ export default function App() {
   };
 
   // Paleta de cores para o Gráfico de Pizza
-  const cores = ["#FF6384", "#36A2EB", "#FFCE56", "#4BC0C0", "#9966FF", "#FF9F40", "#2ECC71", "#E74C3C"];
+  const cores = ["#f74780", "#fc6998", "#fa8fb1", "#ffc1d5", "ffe4ec"];
 
   async function carregarDados() {
     try {
@@ -142,7 +142,7 @@ export default function App() {
               height={220}
               chartConfig={chartConfig}
               accessor="population"
-              backgroundColor="transparent"
+              backgroundColor="#ffffff"
               paddingLeft="15"
               absolute
               style={{ marginVertical: 10, borderRadius: 16 }}
@@ -202,7 +202,7 @@ export default function App() {
 }
 
 const styles = StyleSheet.create({
-  container: { flex: 1, backgroundColor: "#f1f5f9" },
+  container: { flex: 1, backgroundColor: "#" },
   logo: {
     width: 200,      // Largura da imagem
     height: 200,     // Altura da imagem
@@ -227,7 +227,7 @@ const styles = StyleSheet.create({
   cardGrafico: { 
     width: "100%", 
     maxWidth: 800, 
-    backgroundColor: "#ffffff", 
+    backgroundColor: "##fff9f9", 
     borderRadius: 20, 
     paddingVertical: 20, 
     paddingHorizontal: 10, 
@@ -257,8 +257,11 @@ const styles = StyleSheet.create({
   botao: { 
     width: "100%", 
     maxWidth: 300, 
-    backgroundColor: "#2563eb", 
-    paddingVertical: 15, borderRadius: 12, alignItems: "center", elevation: 4 },
+    backgroundColor: "#ff1d8d", 
+    paddingVertical: 15, 
+    borderRadius: 12, 
+    alignItems: "center", 
+    elevation: 4 },
   textoBotao: { 
     color: "#ffffff", 
     fontSize: 16, 
@@ -298,7 +301,7 @@ const styles = StyleSheet.create({
     fontSize: 15, 
     marginBottom: 18 },
   botaoCadastrar: { 
-    backgroundColor: "#2563eb", 
+    backgroundColor: "#ff1d8d", 
     paddingVertical: 14, 
     borderRadius: 10, 
     alignItems: "center", 
@@ -308,9 +311,9 @@ const styles = StyleSheet.create({
     paddingVertical: 12, 
     borderRadius: 10, 
     alignItems: "center", 
-    backgroundColor: "#fef2f2" },
+    backgroundColor: "#a1bbff" },
   textoCancelar: { 
-    color: "#dc2626", 
+    color: "#ffff", 
     fontSize: 15, 
     fontWeight: "bold" },
 });
